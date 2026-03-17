@@ -8,7 +8,7 @@ const CampgroundSchema = require('../models/campground.model');
 
 // Access mapbox.
 const mapBoxToken = process.env.MAPBOX_TOKEN;
-const geocoder    = mbxGeocoding({ accessToken: mapBoxToken});
+const geocoder    = mbxGeocoding({ accessToken: mapBoxToken });
 
 /**
  * Fuzzy search for finding specific names of campgrounds.
@@ -31,7 +31,7 @@ module.exports.newCampground = async(req, res) => {
 
     const campground    = new CampgroundSchema(req.body.campground);
     campground.geometry = geoData.body.features[0].geometry;
-    campground.images   = req.files.map(f => ({url: f.path, filename: f.filename}))
+    campground.images   = req.files.map(f => ({ url: f.path, filename: f.filename }))
     campground.author   = req.user._id;
 
     await campground.save();
@@ -84,7 +84,7 @@ module.exports.getCampground = async(req, res) => {
 *  @ACCESS private  
 *---------------------------------------------------------------------------------------------------------*/
 module.exports.editCampground = async(req, res) => {
-    const campground = await CampgroundSchema.findByIdAndUpdate(req.params.id, { ...req.body.campground});
+    const campground = await CampgroundSchema.findByIdAndUpdate(req.params.id, { ...req.body.campground });
     if (!campground) {
         req.flash('error', 'Campground NOT Found!');
         res.redirect('/campgrounds')
