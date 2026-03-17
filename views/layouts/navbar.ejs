@@ -1,0 +1,34 @@
+<!-- SECTION CONTAINING MAJOR NAVIGATION LINKS -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="navbar-header">
+    <div class="container-fluid">
+      <!-- COLLAPSIBLE NAVIGATION MENU (HAMBURGER MENU) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAVIGATION BAR -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <i class="fas fa-campground fa-lg"></i>
+            
+            <!-- NAVIGATION LINKS -->
+            <a class="nav-link" href="/" aria-current="page" ><i class="fas fa-home"></i> Home </a>
+            <a class="nav-link" href="/campgrounds"><i class="fab fa-free-code-camp fa-lg"></i> Campgrounds </a>
+            <a class="nav-link" href="#"><i class="fas fa-tags"></i> Pricing </a>
+
+            <!-- DISPLAY LOGIN OR LOGOUT BASED ON USER EXISTING -->
+            <% if (!currentUser) { %> 
+              <a class="nav-link" href="/login" tabindex="-1" aria-disabled="true"><i class="far fa-user-circle"></i> Login </a>
+            <%} else { %> 
+              <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true"><i class="far fa-user-circle"></i>  Logout </a>
+            <% } %>
+            
+            <!-- SEARCH BAR FORM -->
+            <form class="nav-link d-flex" id="search" action="/campgrounds" method="GET">
+              <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </nav>

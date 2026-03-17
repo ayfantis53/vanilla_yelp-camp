@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Boilerplate Page Styles
+   ========================================================================== */
+
+
+/* =============
+ * NavBar styling.
+ * ============= */
+
+/* Styling for the navigation bar container */
+.navbar-nav {
+    display: flex;                  /* Use flexbox for layout */
+    flex: 1;                        /* Allow the container to grow */
+    justify-content: space-between; /* Distribute items with space between them */
+    align-items: center;            /* Vertically align items in the center */
+}
+
+/* Styling for individual navigation links */
+.nav-link {
+  font-size: 1.1rem; /* Increase font size */
+}
+
+/* Hover effect for navigation links (Note: this selector is likely incorrect and may not work as intended) */
+.nav-link :hover {
+  background-color: #111111; /* Change background color on hover */
+}
+
+/* Styling to fix the search bars automatic margins */
+#search {
+    margin: 0;
+}
+
+/* Global body styling */
+body {
+    display: flex; /* Use flexbox for body layout */
+    flex-direction: column; /* Stack children vertically */
+    background-image: linear-gradient(gray, tomato); /* Apply a background gradient */
+    background-attachment: fixed; /* Fix the background image position during scroll */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+    text-align: center; /* Center all text inside the body */
+}
+
+/* Styling for main headings (h1, h2, h3) */
+h1, h2, h3 {
+    margin-top: 30px; /* Add top margin */
+    color: white; /* Set text color to white */
+    text-align: center; /* Center the text */
+}
+
+/* Styling for all anchor tags (links) */
+a {
+    color: indigo; /* Set default link color */
+}
+/* Hover effect for links */
+a:hover {
+    color: ivory; /* Change link color on hover */
+}
+
+/* Specific styling for an element with id="card_index" */
+#card_index {
+    text-align: left; /* Align text to the left */
+    margin-left: auto; /* Center the element horizontally using auto margins */
+    margin-right: auto;
+    max-height: 30rem; /* Set a maximum height */
+}
+/* Styling for links inside #card_index */
+#card_index > a {
+    margin-right: auto; /* Push the link to the left */
+}
+
+/* Styling for modal body content */
+.modal-body {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling for a container with id="show_page" */
+#show_page {
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange children in a row */
+    margin-top: 40px; /* Add top margin */
+    margin-bottom: 50px; /* Add bottom margin */
+}
+
+/* Styling for a card within the show page */
+#show_card {
+    justify-content: left; /* Align content to the left */
+    text-align: left; /* Align text to the left */
+    margin-right: 40px; /* Add right margin */
+    margin-left: auto; /* Center the element within its container */
+}
+
+/* Styling for a container with id="show_page" */
+#show_map {
+    height: 400px;
+}
+
+/* Styling for a review section within the show page */
+#show_review {
+    justify-content: right; /* Align content to the right */
+    margin-left: 40px; /* Add left margin */
+    text-align: left; /* Align text to the left */
+    margin-right: auto; /* Center the element within its container */
+    margin-top: "-40px; /* Note: this has a syntax error, likely missing a closing `"` and the value might need adjustment */
+}
+
+/* Styling for card headers (Note: this selector has a syntax error, missing a leading `.`) */
+.card-header {
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange children in a row */
+}
+
+/*--------------------------------------------------------------------------
+  Responsive Media Query: Screens 800px and smaller
+  -------------------------------------------------------------------------- */
+@media screen and (max-width: 800px) {
+    h1, h2, h3 {
+        margin-top: 30px;
+        color: white;
+        text-align: center;
+        font-size: medium;
+    }
+    
+    a {
+        color: indigo;
+    }
+    a:hover {
+        color: ivory;
+    }
+    
+    #card_index {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+        font-size: small;
+    }
+    
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    #show_page {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    
+    #show_card {
+        justify-content: left;
+        text-align: left;
+        margin-right: 2px;
+        margin-left: 2px;
+        font-size: small;
+    }
+
+    #show_review {
+        justify-content: right;
+        margin-left: 2px;
+        text-align: left;
+        margin-right: 2px;
+        margin-top: 20px;
+        font-size: small;
+    }
+    
+    .card-header {
+        display: flex;
+        flex-direction: row;
+        font-size: medium;
+    }
+}

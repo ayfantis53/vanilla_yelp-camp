@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Home Page Styles
+   ========================================================================== */
+
+
+/*
+ * General body styles for a full-screen effect.
+ */
+body {
+    height: 100vh;                                      /* Set body height to 100% of the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), tomato),
+    url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;                             /* Resize the background image to cover the entire container */
+    background-position: center;                        /* Center the background image */
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to the text */
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);    /* Adds an inner shadow effect */
+}
+
+/*
+ * Styles for the Header content container.
+ */
+.cover-container {
+  max-width: 60vw; /* Constrains the maximum width of the container to 60% of the viewport width */
+}
+
+/*
+ * Navigation bar layout using flexbox.
+ */
+.nav {
+    display: flex;                  /* Uses flexbox for layout */
+    justify-content: space-between; /* Distributes items evenly in the flex container */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/*
+ * General styles for navigation links.
+ */
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;                         /* Bolder font weight */
+    color: rgba(255,255,255,0.5);           /* Semi-transparent white color */
+    border-bottom: 0.25rem solid transparent; /* Transparent bottom border for the hover effect */
+}
+
+/*
+ * Hover effect for navigation links.
+ */
+.nav-link:hover {
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5); /* Changes border color on hover */
+}
+
+/*
+ * Styles for the active/current navigation link.
+ */
+.nav-link.active {
+    color: white;              /* Active link color is solid white */
+    border-bottom-color:white; /* Active link bottom border is solid white */
+
+}
+
+/*
+ * Styles for secondary buttons.
+ */
+.btn-secondary, .btn-secondary:hover {
+    color: #333;     /* Darker text color for better contrast */
+    text-shadow: none; /* Removes the text shadow applied globally to the body */
+}

@@ -1,0 +1,32 @@
+# ==================================================================================== #
+#                             ** Docker-Compose-Release **                             #
+# ==================================================================================== #
+
+services:
+  # 1. --  Yelp-camp apps --  #
+  yelp-camp:
+    container_name: ayfantis53/yelp-camp   # Our name for container
+    image: yelp-camp
+    build: .                               # Use to build an image from a local Dockerfile
+    volumes:                               # instruction defines mount points for the container when it is running.
+      - /app/node_modules
+    depends_on:
+      - mongo-db
+    environment:
+      PORT: ${PORT}
+      SECRET: ${SECRET}
+      CLOUDINARY_NAME: ${CLOUDINARY_NAME}
+      CLOUDINARY_SECRET: ${CLOUDINARY_SECRET}
+      CLOUDINARY_API_KEY: ${CLOUDINARY_API_KEY}
+      MONGO_ATLAS_PASSWORD: ${MONGO_ATLAS_PASSWORD}
+      DB_URL: mongodb://mongo-db:27017/yelp-camp
+      MAPBOX_TOKEN: ${MAPBOX_TOKEN}
+    ports:                            # Map host port 3000 to container port 3000
+      - '3000:3000'
+  # 2. --  Mongo Service --  #
+  mongo-db: 
+    container_name: mongo-db          # Our name for container
+    image: mongo                      # Use the official MongoDB image from Docker Hub
+    ports:                            # Map host port 27017 to container port 27017
+      - '27017:27017'
+
