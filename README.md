@@ -78,7 +78,7 @@ node models/seeds/index.js
 ### 4. Running project Docker.
 - **Run project.**
     * On windows machine open DockerDesktop.
-    * navigate to **[http://localhost:3050/]** in browser after running compose.
+    * navigate to **[http://localhost:3000/]** in browser after running compose.
         ```bash
         docker-compose up --detach
         docker-compose down
