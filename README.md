@@ -4,17 +4,14 @@
 - **The Web Developer Bootcamp 2026**
     > [https://www.udemy.com/course/the-web-developer-bootcamp/]
 
+- Yelp Camp is a Vanilla Javascript project made with JS, HTML5, CSS/Bootstrap5, Express.
+- It has a Dockerized element that runs the web app with a localized Mongo DB. 
+    
 
 -----------------------------------------------------------------------------------------------------------------
 ## Setting up Yelp-Camp App
 
-### 1. Dependencies.
-- **Node.js**
-- **Express.js**
-- **Mongoose**
-- **DockerDesktop (Enable Kubernetes)** 
-
-### 2. Initializing project folders and dependencies.
+### 1. Initializing project folders and dependencies.
 ```bash
 # Create Frontend Folders
 npm init -y
@@ -24,12 +21,12 @@ npm i cloudinary @mapbox/mapbox-sdk connect-flash connect-mongo express-session
 npm i joi mapbox-gl multer multer-storage-cloudinary passport-local-mongoose
 ```
 
-### 3. Setting up Mongo DB.
+### 2. Setting up Mongo DB.
 - Navigate to **[https://www.mongodb.com/try/download/community]**
     * MongoDB Community Server Download
 - Open up Mongo Atlas Compass and connect to the Yelp-camp database.
 
-### 4. Setting up Docker.
+### 3. Setting up Docker.
 #### Login.
 ```bash 
 docker login -u ${username} 
@@ -41,7 +38,7 @@ docker image prune --all --force
 docker system prune
 ```
 
-### 5. Connecting to Database.
+### 4. Connecting to Database.
 - Copy uri into var **<ATLAS_URI>** in .env file with extension [mongo-url]
 
 
