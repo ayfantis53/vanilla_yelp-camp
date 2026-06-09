@@ -43,7 +43,7 @@ docker system prune
 
 
 -----------------------------------------------------------------------------------------------------------------
-## Running Memories App locally
+## Running Yelp-Camp App locally
 
 ### 1. Debugging.
 - **<Shift + Ctrl + J> to open browser console for debugging.**
