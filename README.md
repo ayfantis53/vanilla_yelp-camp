@@ -46,12 +46,12 @@ docker system prune
 ## Running Yelp-Camp App locally
 
 ### 1. Debugging.
-- **<Shift + Ctrl + J> to open browser console for debugging.**
-    ```bash
-    npm ls react
-    npm cache clean --force
-    npm install -g npm
-    ```
+> **<Shift + Ctrl + J> to open browser console for debugging.**
+```bash
+npm ls react
+npm cache clean --force
+npm install -g npm
+```
 ### 2. Running project manually.
 ```bash
 # package.lock command
